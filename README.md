@@ -1,17 +1,18 @@
 # python-de-insight
 
-## PCA 수행
+## Implementation
 
-### PCA 실행
-1. **목적**: 고차원의 데이터를 주요 정보만 유지하며 차원을 축소.
-2. 데이터의 희소성과 계산 복잡성을 줄이기 위해 연도별 피처의 평균값을 사용.
-3. PCA를 적용하여 가장 정보량이 많은 주성분으로 새로운 피처를 생성.
+### PCA Execution
+1. **Objective**: Reduce the dimensionality of high-dimensional data while retaining key information for effective recommendations.
+2. Used the average of yearly features to minimize data sparseness and computational complexity.
+3. Applied PCA to derive new principal components, replacing the original features with linear combinations of the most informative ones.
 
-### PCA 결과
-- PCA를 통해 원본 데이터를 선형 결합한 새로운 피처를 생성.
-- 상권 형성에 가장 큰 영향을 미치는 주요 변수를 도출.
-- 하지만, PCA 변환으로 인해 원본 피처의 해석 가능성이 감소.
+### Results of PCA
+- PCA produced new features through linear combinations of the original data.
+- The analysis highlighted the most impactful variables shaping commercial districts.
+- However, the transformation resulted in a loss of interpretability for the original features.
 
-### 결과
-- PCA 변환된 피처의 해석 가능성 부족으로 인해 추천 시스템에 직접 활용되지 않았음.
-- 대신, 임대료와 인구 밀도와 같은 창업 의사결정에 중요한 주요 피처를 수동으로 선택하여 활용.
+### Outcome
+- Due to the interpretability issues of PCA-transformed features, the approach was not directly utilized in the recommendation system.
+- Instead, key features like rental prices and population density were selected manually, as these factors are critical for decision-making in business startups.
+
